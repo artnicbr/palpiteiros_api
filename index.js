@@ -7,7 +7,7 @@ var express = require('express'),
     port = process.env.PORT || 3005;
 
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://172.17.0.2/palpiteiros', { useMongoClient: true });
+mongoose.connect('mongodb://172.17.0.2/palpiteiros');
 
 app.use(bodyParser.json());
 routes(app);
