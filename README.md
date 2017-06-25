@@ -10,6 +10,6 @@ Criar um projeto totalmente JS (API, banco, front, WebAPP e Website) para uma co
 
 ## STACK
 1. NodeJS
-  1. Express
-  1. Mongoose
+    1. Express
+    1. Mongoose
 1. MongoDB
