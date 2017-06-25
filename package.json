@@ -1,0 +1,31 @@
+{
+  "name": "palpiteiros_api",
+  "version": "1.0.0",
+  "description": "Communication API in NodeJS + MongoDB",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/artnicbr/palpiteiros_api.git"
+  },
+  "keywords": [
+    "node",
+    "express",
+    "mongo",
+    "mongoose"
+  ],
+  "author": "ArtnicBR (Andre Ricardo Cintra)",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/artnicbr/palpiteiros_api/issues"
+  },
+  "homepage": "https://github.com/artnicbr/palpiteiros_api#readme",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "mongoose": "^4.11.0"
+  }
+}
