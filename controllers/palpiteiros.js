@@ -2,7 +2,7 @@ var mongoose = require('mongoose'),
     Palpiteiro = mongoose.model('Palpiteiro');
 
 module.exports.listAll = function(req, res){
-    Palpiteiro.find({status: true}, function(err, palpiteiros){        
+    Palpiteiro.find({ status: true }, function(err, palpiteiros){        
         if(err)
             res.send(err);
         

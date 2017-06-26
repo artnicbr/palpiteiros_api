@@ -19,6 +19,10 @@ var Palpiteiro = new Schema({
         type : Boolean,
         default: true
     },
+    palpites : [{
+        type : Schema.Types.ObjectId, 
+        ref: 'Palpite'
+    }]
 });
 
 module.exports = mongoose.model('Palpiteiro', Palpiteiro);

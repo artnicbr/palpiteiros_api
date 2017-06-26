@@ -3,11 +3,13 @@ var express = require('express'),
     app = express(),
     mongoose = require('mongoose'),
     Palpiteiro = require('./models/palpiteiro'),
-    routes = require('./routes/routes'),
-    port = process.env.PORT || 3005;
+    routes = require('./routes/routes'),    
+    fs = require('fs'),
+    config = JSON.parse(fs.readFileSync('config.json', 'utf8')),
+    port = process.env.PORT || config.server.port || 8080;
 
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://172.17.0.2/palpiteiros');
+mongoose.connect(config.database.development.driver + '://' + config.database.development.host + '/' + config.database.development.database);
 
 app.use(bodyParser.json());
 routes(app);
