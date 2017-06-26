@@ -3,7 +3,7 @@ var mongoose = require('mongoose'),
 
 var Palpite = new Schema({
     rodada: {
-        type: Integer
+        type: Number
     },
     mandante: {
         type: "String"
@@ -15,9 +15,17 @@ var Palpite = new Schema({
         type: "String",
         enum: ["mandante","visitante","empate"]
     },
+    Palpiteiro : {
+        type : Schema.Types.ObjectId, 
+        ref: 'Palpiteiro'
+    },
     created_at : {
         type: Date,
         default: Date.now
+    },
+    status : {
+        type: Boolean,
+        default : true
     }
 });
 
