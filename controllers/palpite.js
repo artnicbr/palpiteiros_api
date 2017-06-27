@@ -2,7 +2,9 @@ var mongoose = require('mongoose'),
     Palpite = mongoose.model('Palpite');
 
 module.exports.listAll = function(req, res){
-    Palpite.find({ status: true }, function(err, palpite){        
+    Palpite.find({ status: true })
+    .populate('Palpiteiro')
+    .exec(function(err, palpite){        
         if(err)
             res.send(err);
         
@@ -11,7 +13,9 @@ module.exports.listAll = function(req, res){
 }
 
 module.exports.getById = function(req, res){
-    Palpite.find({_id: req.params.id, status: true}, function(err, palpite){
+    Palpite.find({_id: req.params.id, status: true})
+    .populate('Palpiteiro')
+    .exec(function(err, palpite){
         if(err)
             res.json({
                 error: 7,
@@ -23,7 +27,9 @@ module.exports.getById = function(req, res){
 }
 
 module.exports.getByUserId = function(req, res){
-    Palpite.find({Palpiteiro: req.params.id, status: true}, function(err, palpites){
+    Palpite.find({Palpiteiro: req.params.id, status: true})
+    .populate('Palpiteiro')
+    .exec(function(err, palpites){
         if(err)
             res.json({
                 error: 7,
