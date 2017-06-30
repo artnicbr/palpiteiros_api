@@ -45,8 +45,8 @@ module.exports.deactivateOne = function(req, res){
         if(err)
             res.json({status: -1, message: "Problem while removing id: " + req.params._id, error: err});
         
-        Palpite.status = false;
-        Palpite.save();
+        palpite.status = false;
+        palpite.save();
     });
 }
 
@@ -55,11 +55,11 @@ module.exports.updateOne = function(req, res){
         if(err)
             res.json({status: -1, message: "Problem while updating id: " + req.params._id, error: err});
         
-        Palpite.rodada = req.body.nome;
-        Palpite.mandante = req.body.email;
-        Palpite.visitante = req.body.senha;
-        Palpite.resultado = req.body.login;
-        Palpite.save();
+        palpite.rodada = req.body.nome;
+        palpite.mandante = req.body.email;
+        palpite.visitante = req.body.senha;
+        palpite.resultado = req.body.login;
+        palpite.save();
     });
 }
 

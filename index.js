@@ -4,6 +4,7 @@ var express = require('express'),
     mongoose = require('mongoose'),    
     Palpite = require('./models/palpite'),
     Palpiteiro = require('./models/palpiteiro'),    
+    Resultado = require('./models/resultado');
     routes = require('./routes/routes'),    
     fs = require('fs'),
     config = JSON.parse(fs.readFileSync('config.json', 'utf8')),

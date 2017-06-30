@@ -17,7 +17,6 @@ module.exports = function(app){
         .put('/palpite',palpitesController.updateOne);
     
     app.get('/resultado', resultadoController.listAll)
-        .get('/resultado/:id', resultadoController.getById)
         .post('/resultado', resultadoController.insertOne)
         .delete('/resultado/:id',resultadoController.deactivateOne)
         .put('/resultado',resultadoController.updateOne);
