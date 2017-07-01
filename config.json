@@ -1,0 +1,22 @@
+{
+    "server" : {
+        "port": "8080"
+    },
+    "database" : {
+        "production" : {
+            "driver": "",
+            "host": "",
+            "user": "",
+            "pass": "",
+            "port": ""
+        },
+        "development" : {
+            "driver": "mongodb",
+            "host": "172.17.0.2",
+            "user": "",
+            "pass": "",
+            "port": "27017",
+            "database" : "palpiteiros"
+        }
+    }
+}
