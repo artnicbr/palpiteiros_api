@@ -48,7 +48,7 @@ module.exports.updateOne = function(req, res){
 module.exports.insertOne = function(req, res){
     var status,
         msg;
-
+        
     newPalpiteiro = new Palpiteiro(req.body);
     newPalpiteiro.save()
         .then(function(){
